@@ -1,3 +1,22 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
 .app
+  div(flex)
+    md-toolbar.md-hue-2
+      .md-toolbar-tools
+        md-button.md-icon-button(aria-label="Settings")
+          i.fa.fa-bars
+        h2(flex="", md-truncate="") Home
+        md-button.md-icon-button(aria-label="Favorite")
+          md-icon(md-svg-icon="img/icons/favorite.svg", style="color: greenyellow;")
+        md-button.md-icon-button(aria-label="More")
+          md-icon(md-svg-icon="img/icons/more_vert.svg")
+    //- md-sidenav.md-sidenav-left(md-component-id="left", md-is-locked-open="true", md-whiteframe="4")
+    //-   md-toolbar.md-theme-indigo
+    //-     h1.md-toolbar-tools Sidenav Left
+    //-   md-content(layout-padding="")
+    //-     md-button.md-primary(ng-click="close()", hide-gt-md="")
+    //-       | Close Sidenav Left
+    //-     p(hide="", show-gt-md="")
+    //-       | This sidenav is locked open on your device. To go back to the default behavior,
+    //-       | narrow your display.
   ui-view
