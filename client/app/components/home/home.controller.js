@@ -3,10 +3,9 @@ class HomeController {
     "ngInject";
     this.$state = $state;
     this.text = 'Hola Amigo';
-    this.init();
   };
   
-  init = () => {
+  $onInit = () => {
     this.$state.go('repositories');
   };
 }
