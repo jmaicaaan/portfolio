@@ -1,16 +1,14 @@
 div
-  md-grid-list(md-cols-xs='1', md-cols-sm='2', md-cols-md='4', md-cols-gt-md='6', md-row-height-gt-md='1:1', md-row-height='2:2', md-gutter='12px', md-gutter-gt-sm='8px')
-    md-grid-tile(ng-repeat="i in $ctrl.repositories")
-      md-card
-        img.md-card-image(alt="repository-icon", ng-src="{{ i.icon }}")
-        |     
-        md-card-title
-          md-card-title-text
-            span.md-title {{ i.name }}
-        |     
-        md-card-content
-          p {{ i.description }}
-        md-card-actions(layout='column', layout-align='start')
-          md-button(href="{{ i.link }}" target="_blank") View Demo
-      md-grid-tile-footer
-        h3 #1: (3r x 2c)
+  .repositories
+    md-card(ng-repeat="i in $ctrl.repositories")
+      img.md-card-image(alt="repository-icon", ng-src="{{ i.icon }}")
+      |     
+      md-card-title
+        md-card-title-text
+          span.md-title {{ i.name }}
+      |     
+      md-card-content
+        p {{ i.description }}
+      md-card-actions(layout="row", layout-align="end")
+        md-button(href="{{ i.url }}" target="_blank") Source Code
+        md-button(href="{{ i.url }}" target="_blank") View Demo

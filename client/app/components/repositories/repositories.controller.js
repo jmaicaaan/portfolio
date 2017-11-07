@@ -1,10 +1,19 @@
 class RepositoriesController {
-  constructor($state, $stateParams) {
+  constructor($state, $stateParams, repositoryService) {
     "ngInject";
     this.name = 'repositories';
+    this.repositoryService = repositoryService;
     this.repositories = [];
-    this.getRepositories();
+    // this.getRepositories();
   }
+
+  $onInit = () => {
+    this.repositoryService.getRepositories()
+      .then((data) => {
+        this.repositories = data;
+        console.log('data', data);
+      });
+  };
 
   getRepositories = () => {
     this.repositories = [
