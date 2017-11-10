@@ -3,7 +3,7 @@
   div(flex)
     md-toolbar.md-hue-2
       .md-toolbar-tools
-        md-button.md-icon-button(aria-label="Settings")
-          i.fa.fa-bars
-        h2(flex="", md-truncate="") Home
+        .avatar
+          img(ng-src="{{ user.avatar_url }}")
+        a(flex="", md-truncate="", href="{{ user.html_url }}" target="_blank") {{ user.name }}
   ui-view

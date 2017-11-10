@@ -1,8 +1,11 @@
 import template from './app.pug';
 import './app.scss';
+import controller from './app.controller';
 
 let appComponent = {
-  template
+  bindings: {},
+  template,
+  controller
 };
 
 export default appComponent;

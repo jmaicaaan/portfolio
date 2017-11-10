@@ -21,11 +21,14 @@ angular.module('app', [
     Common,
     Components
   ])
-  .config(($locationProvider) => {
+  .config(($locationProvider, $mdThemingProvider) => {
     "ngInject";
     // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
+    $mdThemingProvider.theme('default')
+      .primaryPalette('blue')
+      .accentPalette('light-blue')
   })
 
   .component('app', AppComponent);

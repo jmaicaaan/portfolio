@@ -7,7 +7,7 @@ div
       md-card-content
         p.md-caption {{ i.description }}
         .actions
-          md-button.md-icon-button(href="{{ i.url }}" target="_blank")
+          md-button.md-icon-button(href="{{ i.url }}" target="_blank" aria-label="Source code")
             i.fa.fa-code
-          md-button.md-icon-button(href="{{ i.demo_link }}" target="_blank" ng-disabled="!i.demo_link")
+          md-button.md-icon-button(href="{{ i.demo_link }}" target="_blank" ng-disabled="!i.demo_link" aria-label="Demo link")
             i.fa.fa-external-link

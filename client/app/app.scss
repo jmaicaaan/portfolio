@@ -5,3 +5,11 @@
 .app {
   height: 100%;
 }
+
+.avatar {
+  img {
+    width: 25px;
+    border-radius: 25px;
+    margin-right: 1em;
+  }
+}
