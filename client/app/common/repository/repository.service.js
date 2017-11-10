@@ -2,7 +2,7 @@ class RepositoryService {
   constructor($http) {
     "ngInject";
     this._$http = $http;
-    this.baseURL = 'http://192.168.1.9:3000';
+    this.baseURL = 'http://192.168.1.9:1111';
   };
 
   getRepositories = () => {

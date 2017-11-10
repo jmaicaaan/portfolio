@@ -1,14 +1,13 @@
 div
   .repositories
     md-card(ng-repeat="i in $ctrl.repositories")
-      img.md-card-image(alt="repository-icon", ng-src="{{ i.icon }}")
-      |     
       md-card-title
         md-card-title-text
-          span.md-title {{ i.name }}
-      |     
+          span.md-body-1 {{ i.name }}
       md-card-content
-        p {{ i.description }}
-      md-card-actions(layout="row", layout-align="end")
-        md-button(href="{{ i.url }}" target="_blank") Source Code
-        md-button(href="{{ i.url }}" target="_blank") View Demo
+        p.md-caption {{ i.description }}
+        .actions
+          md-button.md-icon-button(href="{{ i.url }}" target="_blank")
+            i.fa.fa-code
+          md-button.md-icon-button(href="{{ i.demo_link }}" target="_blank" ng-disabled="!i.demo_link")
+            i.fa.fa-external-link
