@@ -1,7 +1,7 @@
 {
-  "name": "angular-starter",
+  "name": "portfolio",
   "version": "0.0.0",
-  "description": "Angular Starter Pack",
+  "description": "In completion of FreeCodeCamp front end certificate - An own portfolio page written in javascript",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -30,7 +30,7 @@
   "engines": {
     "node": "7.x"
   },
-  "homepage": "",
+  "homepage": "https://jmaicaaan.github.io/portfolio",
   "basePath": "/portfolio/",
   "devDependencies": {
     "@types/jquery": "^3.2.4",
